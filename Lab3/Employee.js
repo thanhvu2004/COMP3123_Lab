@@ -6,3 +6,5 @@ let employees = [
     {id: 3, firstName: "Racks", lastName: "Jacson", email: "racks@gmail.com", Salary:5500},
     {id: 4, firstName: "Denial", lastName: "Roast", email: "denial@gmail.com", Salary:9000}
 ]
+
+module.exports = employees;
