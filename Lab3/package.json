@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon ./index.js localhost 8081"
+    "dev": "nodemon ./index.js localhost 8081"
   },
   "keywords": [
     "sample",
@@ -29,7 +29,8 @@
   "homepage": "https://nodejs.org/",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "lab03": "file:"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
