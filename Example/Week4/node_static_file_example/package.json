@@ -1,0 +1,22 @@
+{
+  "name": "node_static_file_example",
+  "version": "1.0.0",
+  "description": "Sample static file read example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "static",
+    "file",
+    "node",
+    "express",
+    "http"
+  ],
+  "author": "Pritesh Patel",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

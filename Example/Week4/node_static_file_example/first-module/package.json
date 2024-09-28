@@ -1,0 +1,15 @@
+{
+  "name": "pritesh-first-module",
+  "version": "1.0.2",
+  "description": "This is a sample node package is created for testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev" : "nodemon ./index.js localhost 8081"
+  },
+  "author": "Pritesh Patel <pritam.world@gmail.com> (http:example.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
