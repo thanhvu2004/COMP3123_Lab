@@ -68,7 +68,7 @@ app.use((err,req,res,next) => {
 
 - How would you implement error handling in the Express routes to ensure that any issues (such as file not found or server errors) are appropriately handled? Provide an example.
 
-- 
+- Error handling can be implemented using a custom middleware function that catches errors from routes. For example using a try-catch block for async operations and call next(error) to pass errors to middleware
 
 ---
 
