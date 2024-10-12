@@ -17,7 +17,7 @@ router.post(
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({ status: false, errors: errors.array() });
     }
 
     const { username, email, password } = req.body;
@@ -26,7 +26,9 @@ router.post(
       // Check if user already exists
       let user = await User.findOne({ email });
       if (user) {
-        return res.status(400).json({ message: "User already exists" });
+        return res
+          .status(400)
+          .json({ status: false, message: "User already exists" });
       }
 
       // Hash password
@@ -40,7 +42,7 @@ router.post(
         .status(201)
         .json({ message: "User created successfully.", user_id: user._id });
     } catch (err) {
-      res.status(500).json({ message: "Server error" });
+      res.status(500).json({ status: false, message: "Server error" });
     }
   }
 );
@@ -52,7 +54,7 @@ router.post(
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({ status: false, errors: errors.array() });
     }
 
     const { email, password } = req.body;
@@ -63,7 +65,7 @@ router.post(
       if (!user) {
         return res
           .status(400)
-          .json({ message: "Invalid username or password" });
+          .json({ status: false, message: "Invalid username or password" });
       }
 
       // Compare password
@@ -71,7 +73,7 @@ router.post(
       if (!isMatch) {
         return res
           .status(400)
-          .json({ message: "Invalid username or password" });
+          .json({ status: false, message: "Invalid username or password" });
       }
 
       // Return JWT token
@@ -80,7 +82,7 @@ router.post(
       });
       res.status(200).json({ message: "Login successful.", jwt_token: token });
     } catch (err) {
-      res.status(500).json({ message: "Server error" });
+      res.status(500).json({ status: false, message: "Server error" });
     }
   }
 );
