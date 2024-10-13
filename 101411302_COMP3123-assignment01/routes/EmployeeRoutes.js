@@ -100,6 +100,8 @@ router.put("/employees/:eid", async (req, res) => {
 });
 
 // DELETE /api/v1/emp/employees
+// note: The Delete doesn't return any message due to status code 204 (No Content) explicitly indicates that the response has no body,
+// returning JSON content is not compatible with this status.
 router.delete('/employees', async (req, res) => {
     const { eid } = req.query;
     try {
