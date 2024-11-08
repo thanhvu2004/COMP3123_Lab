@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.label {
+  display: block;
+  margin-top: 20px;
+}
+
+form input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  box-sizing: border-box;
+}
+
+.checkbox-inline {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.checkbox-inline input {
+  width: fit-content;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
